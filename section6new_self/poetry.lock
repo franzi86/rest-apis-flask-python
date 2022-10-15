@@ -1,16 +1,5 @@
 [[package]]
 category = "main"
-description = "A library for parsing ISO 8601 strings."
-name = "aniso8601"
-optional = false
-python-versions = "*"
-version = "9.0.1"
-
-[package.extras]
-dev = ["black", "coverage", "isort", "pre-commit", "pyenchant", "pylint"]
-
-[[package]]
-category = "main"
 description = "A pluggable API specification generator. Currently supports the OpenAPI Specification (f.k.a. the Swagger specification)."
 name = "apispec"
 optional = false
@@ -65,46 +54,9 @@ Werkzeug = ">=2.2.2"
 click = ">=8.0"
 itsdangerous = ">=2.0"
 
-[package.dependencies.importlib-metadata]
-python = "<3.10"
-version = ">=3.6.0"
-
 [package.extras]
 async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
-
-[[package]]
-category = "main"
-description = "Extended JWT integration with Flask"
-name = "flask-jwt-extended"
-optional = false
-python-versions = ">=3.7,<4"
-version = "4.4.4"
-
-[package.dependencies]
-Flask = ">=2.0,<3.0"
-PyJWT = ">=2.0,<3.0"
-Werkzeug = ">=0.14"
-
-[package.extras]
-asymmetric_crypto = ["cryptography (>=3.3.1)"]
-
-[[package]]
-category = "main"
-description = "Simple framework for creating REST APIs"
-name = "flask-restful"
-optional = false
-python-versions = "*"
-version = "0.3.9"
-
-[package.dependencies]
-Flask = ">=0.8"
-aniso8601 = ">=0.82"
-pytz = "*"
-six = ">=1.3.0"
-
-[package.extras]
-docs = ["sphinx"]
 
 [[package]]
 category = "main"
@@ -131,15 +83,15 @@ tests = ["pytest (7.1.2)", "pytest-cov (3.0.0)", "coverage (6.4.3)", "werkzeug (
 
 [[package]]
 category = "main"
-description = "Adds SQLAlchemy support to your Flask application."
+description = "Add SQLAlchemy support to your Flask application."
 name = "flask-sqlalchemy"
 optional = false
-python-versions = ">= 2.7, != 3.0.*, != 3.1.*, != 3.2.*, != 3.3.*"
-version = "2.5.1"
+python-versions = ">=3.7"
+version = "3.0.0"
 
 [package.dependencies]
-Flask = ">=0.10"
-SQLAlchemy = ">=0.8.0"
+Flask = ">=2.2"
+SQLAlchemy = ">=1.4.18"
 
 [[package]]
 category = "main"
@@ -152,23 +104,6 @@ version = "1.1.3"
 
 [package.extras]
 docs = ["sphinx"]
-
-[[package]]
-category = "main"
-description = "Read metadata from Python packages"
-marker = "python_version < \"3.10\""
-name = "importlib-metadata"
-optional = false
-python-versions = ">=3.7"
-version = "4.12.0"
-
-[package.dependencies]
-zipp = ">=0.5"
-
-[package.extras]
-docs = ["rst.linker (>=1.9)", "jaraco.packaging (>=9)", "sphinx"]
-perf = ["ipython"]
-testing = ["importlib-resources (>=1.3)", "pytest-mypy (>=0.9.1)", "pytest-black (>=0.3.7)", "pytest-perf (>=0.9.2)", "flufl.flake8", "pyfakefs", "packaging", "pytest-enabler (>=1.3)", "pytest-cov", "pytest-flake8", "pytest-checkdocs (>=2.4)", "pytest (>=6)"]
 
 [[package]]
 category = "main"
@@ -230,20 +165,6 @@ pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
 
 [[package]]
 category = "main"
-description = "JSON Web Token implementation in Python"
-name = "pyjwt"
-optional = false
-python-versions = ">=3.6"
-version = "2.4.0"
-
-[package.extras]
-crypto = ["cryptography (>=3.3.1)"]
-dev = ["sphinx", "sphinx-rtd-theme", "zope.interface", "cryptography (>=3.3.1)", "pytest (>=6.0.0,<7.0.0)", "coverage (5.0.4)", "mypy", "pre-commit"]
-docs = ["sphinx", "sphinx-rtd-theme", "zope.interface"]
-tests = ["pytest (>=6.0.0,<7.0.0)", "coverage (5.0.4)"]
-
-[[package]]
-category = "main"
 description = "pyparsing module - Classes and methods to define and execute parsing grammars"
 name = "pyparsing"
 optional = false
@@ -266,27 +187,11 @@ cli = ["click (>=5.0)"]
 
 [[package]]
 category = "main"
-description = "World timezone definitions, modern and historical"
-name = "pytz"
-optional = false
-python-versions = "*"
-version = "2022.2.1"
-
-[[package]]
-category = "main"
-description = "Python 2 and 3 compatibility utilities"
-name = "six"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "1.16.0"
-
-[[package]]
-category = "main"
 description = "Database Abstraction Library"
 name = "sqlalchemy"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
-version = "1.4.40"
+version = "1.4.41"
 
 [package.dependencies]
 [package.dependencies.greenlet]
@@ -347,58 +252,25 @@ MarkupSafe = ">=2.1.1"
 [package.extras]
 watchdog = ["watchdog"]
 
-[[package]]
-category = "main"
-description = "Backport of pathlib-compatible object wrapper for zip files"
-marker = "python_version < \"3.10\""
-name = "zipp"
-optional = false
-python-versions = ">=3.7"
-version = "3.8.1"
-
-[package.extras]
-docs = ["jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "jaraco.packaging (>=9)", "sphinx"]
-testing = ["pytest-mypy (>=0.9.1)", "pytest-black (>=0.3.7)", "func-timeout", "jaraco.itertools", "pytest-enabler (>=1.3)", "pytest-cov", "pytest-flake8", "pytest-checkdocs (>=2.4)", "pytest (>=6)"]
-
 [metadata]
-content-hash = "cd13034ff65c3cbaa88a2b1af105fe6b2bf7d9a038c244689164e52eda9017f8"
-python-versions = "^3.9"
+content-hash = "01ebcd7f2399f1a184c46b8653c21dea30e5d83bc05c93733cf111b97b49ef34"
+python-versions = "^3.10"
 
 [metadata.files]
-aniso8601 = [
-    {file = "aniso8601-9.0.1-py2.py3-none-any.whl", hash = "sha256:1d2b7ef82963909e93c4f24ce48d4de9e66009a21bf1c1e1c85bdd0812fe412f"},
-    {file = "aniso8601-9.0.1.tar.gz", hash = "sha256:72e3117667eedf66951bb2d93f4296a56b94b078a8a95905a052611fb3f1b973"},
-]
 apispec = []
 click = []
 colorama = []
 flask = []
-flask-jwt-extended = []
-flask-restful = [
-    {file = "Flask-RESTful-0.3.9.tar.gz", hash = "sha256:ccec650b835d48192138c85329ae03735e6ced58e9b2d9c2146d6c84c06fa53e"},
-    {file = "Flask_RESTful-0.3.9-py2.py3-none-any.whl", hash = "sha256:4970c49b6488e46c520b325f54833374dc2b98e211f1b272bd4b0c516232afe2"},
-]
 flask-smorest = []
-flask-sqlalchemy = [
-    {file = "Flask-SQLAlchemy-2.5.1.tar.gz", hash = "sha256:2bda44b43e7cacb15d4e05ff3cc1f8bc97936cc464623424102bfc2c35e95912"},
-    {file = "Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl", hash = "sha256:f12c3d4cc5cc7fdcc148b9527ea05671718c3ea45d50c7e732cceb33f574b390"},
-]
+flask-sqlalchemy = []
 greenlet = []
-importlib-metadata = []
 itsdangerous = []
 jinja2 = []
 markupsafe = []
 marshmallow = []
 packaging = []
-pyjwt = []
 pyparsing = []
 python-dotenv = []
-pytz = []
-six = [
-    {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
-    {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
-]
 sqlalchemy = []
 webargs = []
 werkzeug = []
-zipp = []

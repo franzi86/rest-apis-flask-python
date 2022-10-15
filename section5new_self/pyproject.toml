@@ -1,15 +1,12 @@
 [tool.poetry]
-name = "rest-apis-flask-python"
+name = "section5new_self"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-Flask = "^2.2.2"
-Flask-Restful = "^0.3.9"
-Flask-SQLAlchemy = "^2.5.1"
-flask-jwt-extended = "^4.4.4"
+python = "^3.10"
+flask = "^2.2.2"
 flask-smorest = "^0.39.0"
 python-dotenv = "^0.21.0"
 
